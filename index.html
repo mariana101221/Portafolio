@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Proyectos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen p-5 text-white">
+    
+    <div id="navbar" class="navbar">
+        <span>Mis Proyectos</span>
+        <span>Mariana Gómez Afanador</span>
+    </div>
+    
+
+    <div class="flex flex-col items-center mt-20 mb-10">
+        <img id="icono" src="yo.png" class="w-52 h-52 object-cover cursor-pointer transition-transform duration-500 shadow-lg rounded-full border-4 border-white" onclick="rotarIcono()">
+    </div>
+    
+
+    <div class="grid grid-cols-2 gap-8">
+        <div class="tarjeta bg-white p-5 shadow-lg rounded-2xl cursor-pointer hover:shadow-2xl transition w-96 h-80 flex flex-col items-center text-gray-800" onclick="redirigir('http://vacacional.vercel.app')">
+            <iframe src="http://vacacional.vercel.app" class="miniatura"></iframe>
+            <h2 class="text-center text-lg font-semibold mt-3">Vacacional</h2>
+        </div>
+        <div class="tarjeta bg-white p-5 shadow-lg rounded-2xl cursor-pointer hover:shadow-2xl transition w-96 h-80 flex flex-col items-center text-gray-800" onclick="redirigir('http://card-tawny-ten.vercel.app')">
+            <iframe src="http://card-tawny-ten.vercel.app" class="miniatura"></iframe>
+            <h2 class="text-center text-lg font-semibold mt-3">Card</h2>
+        </div>
+        <div class="tarjeta bg-white p-5 shadow-lg rounded-2xl cursor-pointer hover:shadow-2xl transition w-96 h-80 flex flex-col items-center text-gray-800" onclick="redirigir('http://libro-azure.vercel.app')">
+            <iframe src="http://libro-azure.vercel.app" class="miniatura"></iframe>
+            <h2 class="text-center text-lg font-semibold mt-3">Libro</h2>
+        </div>
+        <div class="tarjeta bg-white p-5 shadow-lg rounded-2xl cursor-pointer hover:shadow-2xl transition w-96 h-80 flex flex-col items-center text-gray-800" onclick="redirigir('https://youtu.be/zry2Vpr95h4')">
+            <iframe src="https://www.youtube.com/embed/zry2Vpr95h4" class="miniatura"></iframe>
+            <h2 class="text-center text-lg font-semibold mt-3">Video</h2>
+        </div>
+    </div>
+    
+    <script>
+        function rotarIcono() {
+            document.getElementById('icono').classList.toggle('rotate-180');
+        }
+
+        function redirigir(url) {
+            window.location.href = url;
+        }
+
+        let lastScrollY = window.scrollY;
+        window.addEventListener("scroll", () => {
+            const navbar = document.getElementById("navbar");
+            if (window.scrollY > lastScrollY) {
+                navbar.classList.add("hidden-nav");
+            } else {
+                navbar.classList.remove("hidden-nav");
+            }
+            lastScrollY = window.scrollY;
+        });
+    </script>
+        <style>
+            body {
+                background: linear-gradient(135deg, #1a1a1a, #333333);
+            }
+            .tarjeta {
+                transition: transform 0.3s, box-shadow 0.3s;
+            }
+            .tarjeta:hover {
+                transform: scale(1.05);
+                box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+            }
+            .miniatura {
+                width: 100%;
+                height: 250px;
+                border-radius: 10px;
+                pointer-events: none;
+            }
+            .navbar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.8);
+                padding: 15px;
+                font-size: 24px;
+                font-weight: bold;
+                color: white;
+                transition: top 0.3s;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 30px;
+            }
+            .hidden-nav {
+                top: -60px;
+            }
+        </style>
+</body>
+</html>
