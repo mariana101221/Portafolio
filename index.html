@@ -63,41 +63,45 @@
             lastScrollY = window.scrollY;
         });
     </script>
-        <style>
-            body {
-                background: linear-gradient(135deg, #1a1a1a, #333333);
-            }
-            .tarjeta {
-                transition: transform 0.3s, box-shadow 0.3s;
-            }
-            .tarjeta:hover {
-                transform: scale(1.05);
-                box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
-            }
-            .miniatura {
-                width: 100%;
-                height: 250px;
-                border-radius: 10px;
-                pointer-events: none;
-            }
-            .navbar {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                background: rgba(0, 0, 0, 0.8);
-                padding: 15px;
-                font-size: 24px;
-                font-weight: bold;
-                color: white;
-                transition: top 0.3s;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 15px 30px;
-            }
+       <style>
+        body {
+            background: linear-gradient(135deg, #1a1a1a, #333333);
+        }
+        .tarjeta {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .tarjeta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+        }
+        .miniatura {
+            width: 100%;
+            height: 250px;
+            border-radius: 10px;
+            pointer-events: none;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            transition: top 0.3s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+        }
+        .hidden-nav {
+            top: -60px;
+        }
 
-            @media (max-width: 500px) {
+
+        @media (max-width: 500px) {
             .navbar {
                 position: fixed;
                 bottom: 0; 
@@ -108,8 +112,9 @@
                 font-size: 18px; 
             }
             .hidden-nav {
-                top: -60px;
+                bottom: -60px; 
             }
-        </style>
+        }
+    </style>
 </body>
 </html>
