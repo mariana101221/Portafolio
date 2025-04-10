@@ -269,5 +269,37 @@
     .pie span {
         margin: 0 10px;
     }
+    
+    @media (max-width: 600px) {
+        .contenedor-cv {
+            width: 100%;
+            box-shadow: none;
+        }
+        .encabezado {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px;
+            border-bottom: none; 
+        }
+        .foto-perfil {
+            margin-bottom: 10px;
+        }
+        .info-personal {
+            text-align: center;
+        }
+        .contenido {
+            flex-direction: column;
+        }
+        .columna-izq, .columna-der {
+            width: 100%;
+        }
+        .seccion1 div {
+            margin-left: 0;
+        }
+        .pie {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
 </style>
 </html>
