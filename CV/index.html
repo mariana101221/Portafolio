@@ -106,10 +106,11 @@
 
                 <div class="seccion1">
                     <h3><i class="fa-solid fa-certificate"></i> Certificaciones</h3>
-                    <ul>
-                        <li>Colegio Tecnico Nuestra Señora de la Presentacion</li>
-                        <li>SENA</li>
-                    </ul>
+                    <div class="certificado">
+                        <strong>2024</strong> <br>
+                        <strong>Administracion</strong><br>
+                        <p>SENA</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -189,6 +190,7 @@
     .columna-izq {
         width: 35%;
         background-color: #a9a9a9; 
+        padding-left: 5%;
     }
     .columna-der {
         width: 65%;
@@ -215,6 +217,13 @@
     .seccion1 div {
         margin-bottom: 15px;
         margin-left: 45px;
+        padding-left: 5%;
+    }
+
+    .certificado {
+        padding-bottom: 50px;
+        margin-left: 45px;
+        padding-left: 50%;
     }
 
     .barra {
@@ -268,7 +277,7 @@
         margin: 0 10px;
     }
     
-    @media (max-width: 700px) {
+    @media (max-width: 600px) {
         .contenedor-cv {
             width: 100%;
             box-shadow: none;
@@ -292,7 +301,7 @@
             order: 0; 
             height: 2px; 
             width: 100%; 
-            margin-top: 10px; 
+            margin-top: 10px; /
         }
         .contenido {
             flex-direction: column;
