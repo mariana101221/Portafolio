@@ -11,7 +11,7 @@
 <body>
     <div class="contenedor-cv">
         <div class="encabezado">
-            <div class="foto-perfil"></div>
+            <div class="foto-perfil" image src="images.jpg"></div>
             <div class="info-personal">
                 <div class="nombre"><i class="fa-solid fa-user"></i> Mariana Gómez</div>
                 <div class="profesion"><i class="fa-solid fa-briefcase"></i>Servicio al cliente</div>
@@ -174,10 +174,12 @@
     .foto-perfil {
         width: 100px;
         height: 100px;
-        background: gray;
         border-radius: 50%;
         margin-right: 15px;
         margin-left: 8%;
+        background-image: url(IMG-20250313-WA0022.jpg);
+        background-size: cover;
+        background-position: center;
     }
 
     .info-personal {
@@ -327,7 +329,7 @@
         margin: 0 10px;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 800px) {
         .contenedor-cv {
             width: 100%;
             box-shadow: none;
@@ -342,14 +344,17 @@
 
         .foto-perfil {
             margin-bottom: 10px;
+            margin-left: 40%;
         }
 
         .info-personal {
             text-align: center;
+            margin-left: 35%;
         }
 
         .descripcion {
             order: 1;
+            margin-left: 15%;
         }
 
         .borde-izquierdo {
@@ -376,6 +381,9 @@
         .pie {
             flex-direction: column;
             align-items: center;
+        }
+        .habilidad{
+          padding-left: 13%;
         }
     }
 </style>
