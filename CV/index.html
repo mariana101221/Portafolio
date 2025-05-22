@@ -11,7 +11,7 @@
 <body>
     <div class="contenedor-cv">
         <div class="encabezado">
-            <div class="foto-perfil" image src="images.jpg"></div>
+            <div class="foto-perfil"></div>
             <div class="info-personal">
                 <div class="nombre"><i class="fa-solid fa-user"></i> Mariana Gómez</div>
                 <div class="profesion"><i class="fa-solid fa-briefcase"></i>Servicio al cliente</div>
@@ -178,6 +178,7 @@
         margin-right: 15px;
         margin-left: 8%;
         background-image: url(IMG-20250313-WA0022.jpg);
+        border: 3px solid white;
         background-size: cover;
         background-position: center;
     }
@@ -187,19 +188,19 @@
     }
 
     .nombre {
-        font-size: 16px;
+        font-size: 20px;
         font-weight: bold;
-        margin-bottom: 3px;
+        margin-bottom: 8px;
     }
 
     .profesion {
-        font-size: 10px;
-        opacity: 0.8;
-        margin-bottom: 5px;
+        font-size: 16px;
+        opacity: 0.9;
+        margin-bottom: 10px;
     }
 
     .descripcion {
-        font-size: 14px;
+        font-size: 16px;
         max-width: 300px;
         text-align: center;
         margin: 20px 0;
@@ -252,7 +253,6 @@
         padding-left: 7%;
         font-size: 16px;
         margin-bottom: 10px;
-
     }
 
     .seccion1 div {
@@ -337,31 +337,50 @@
 
         .encabezado {
             flex-direction: column;
-            align-items: flex-start;
-            padding: 20px;
-            border-bottom: none;
+            align-items: center;
+            padding: 30px 20px;
+            text-align: center;
         }
 
         .foto-perfil {
-            margin-bottom: 10px;
-            margin-left: 40%;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            background-color: #ddd;
+            background-size: cover;
+            background-position: center;
+            border: 3px solid white;
+            background-image: url('IMG-20250313-WA0022.jpg')
         }
 
         .info-personal {
-            text-align: center;
-            margin-left: 35%;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+
+        .nombre {
+            font-size: 22px;
+        }
+
+        .profesion {
+            font-size: 16px;
         }
 
         .descripcion {
-            order: 1;
-            margin-left: 15%;
+            margin: 15px auto;
+            max-width: 100%;
+            font-size: 14px;
         }
 
         .borde-izquierdo {
-            order: 0;
+            position: static;
+            transform: none;
+            width: 80%;
             height: 2px;
-            width: 100%;
-            margin-top: 10px;
+            background: white;
+            margin: 15px auto;
+            border-left: none;
         }
 
         .contenido {
@@ -382,8 +401,9 @@
             flex-direction: column;
             align-items: center;
         }
-        .habilidad{
-          padding-left: 13%;
+
+        .habilidad {
+            padding-left: 13%;
         }
     }
 </style>
